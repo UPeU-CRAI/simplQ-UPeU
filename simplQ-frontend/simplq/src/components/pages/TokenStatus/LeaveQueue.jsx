@@ -14,7 +14,10 @@ export default () => {
     dispatch(deleteToken({ tokenId: token.tokenId, goHome: true }));
   };
 
-  // TODO: The item should be disabled if token is already deteled
+  if (token.tokenStatus === 'REMOVED') {
+    return null;
+  }
+
   return (
     <SidePanelItem
       onClick={onDeleteClick}
