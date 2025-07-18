@@ -45,7 +45,7 @@ Pasos básicos:
 cd simplQ-backend/simplq
 mvn package
 # Asegúrate de que PostgreSQL esté en ejecución y disponga de la base de datos "simplq"
-java -jar target/simplq-0.0.1-SNAPSHOT.jar
+java -jar target/simplq-1.0.0.jar
 ```
 
 ### Frontend
@@ -72,3 +72,4 @@ Contribuciones y mejoras son bienvenidas.
 ## Historial de versiones
 
 - **v0.1.0** - Versión inicial del proyecto con backend y frontend base.
+- **v1.0.0** - Primera versión estable con guías de instalación, configuración mediante `.env` y sistema completo de notificaciones.
