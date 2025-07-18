@@ -28,15 +28,14 @@ simplQ-UPeU es una solución completa de código abierto para administrar colas 
 ### Backend
 
 1. Java 11 y Maven instalados.
-2. Base de datos PostgreSQL (se puede usar un contenedor Docker para pruebas).
+2. Base de datos PostgreSQL disponible localmente.
 
 Pasos básicos:
 
 ```bash
 cd simplQ-backend/simplq
 mvn package
-# Levantar una base de datos de desarrollo
-# docker run --name simplq-db -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=admin -e POSTGRES_DB=simplq -d postgres
+# Asegúrate de que PostgreSQL esté en ejecución y disponga de la base de datos "simplq"
 java -jar target/simplq-0.0.1-SNAPSHOT.jar
 ```
 
@@ -55,3 +54,7 @@ npm start
 Cada módulo incluye un `README.md` con detalles adicionales. Para conocer la estructura de código del frontend consulta `simplQ-frontend/simplq/readme.md` y para el backend `simplQ-backend/README.md`.
 
 Contribuciones y mejoras son bienvenidas.
+
+## Historial de versiones
+
+- **v0.1.0** - Versión inicial del proyecto con backend y frontend base.
