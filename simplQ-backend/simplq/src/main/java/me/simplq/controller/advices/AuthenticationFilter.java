@@ -60,13 +60,6 @@ public class AuthenticationFilter implements Filter {
       throw new SQAccessDeniedException(UNAUTHORIZED);
     }
 
-    // TODO: Remove after main site is updated to reflect the new auth changes for anonymous device
-    // ID.
-    if ("Bearer anonymous".equals(authHeaderVal)) {
-      loggedInUserInfo.setUserId("anonymous");
-      return;
-    }
-
     if (authHeaderVal.startsWith(BEARER_HEADER_START_WITH)) {
       bearerAuth(authHeaderVal);
       return;

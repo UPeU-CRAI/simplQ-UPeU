@@ -1,6 +1,5 @@
 package me.simplq.controller.advices;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -14,7 +13,7 @@ class AuthenticationFilterTest {
   private static final String keyUrl = "https://simplq.us.auth0.com/.well-known/jwks.json";
 
   @ParameterizedTest
-  @ValueSource(strings = {"", "invalid header", "invalid-header", "Bearer invalid-header"})
+  @ValueSource(strings = {"", "invalid header", "invalid-header", "Bearer invalid-header", "Bearer anonymous"})
   void denyBadHeaderValues(String testHeaderValue) throws MalformedURLException {
     var authFilter = new AuthenticationFilter(new LoggedInUserInfo(), keyUrl);
     // Deny bad bearer token
@@ -35,7 +34,5 @@ class AuthenticationFilterTest {
     authFilter.authenticate("Anonymous anonymous-test-id");
     assertEquals("anonymous-test-id", loggedInUserInfo.getUserId());
 
-    // Check backward compatibility, should be removed once frontend is updated on main site
-    assertDoesNotThrow(() -> authFilter.authenticate("Bearer anonymous"));
   }
 }
