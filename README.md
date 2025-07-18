@@ -2,6 +2,12 @@
 
 simplQ-UPeU es una solución completa de código abierto para administrar colas de espera virtuales. El proyecto se divide en un **backend** desarrollado en Java/Spring Boot y un **frontend** construido con React.
 
+## Índice de subproyectos
+
+- [Backend](simplQ-backend/README.md): guía de desarrollo y despliegue del API.
+- [Frontend](simplQ-frontend/README.md): instrucciones para la aplicación web.
+- [Estructura del frontend](simplQ-frontend/simplq/readme.md): detalles técnicos del código React.
+
 ## Arquitectura general
 
 - **Backend (`simplQ-backend`)**: expone una API REST para gestionar colas y turnos. Implementa autenticación mediante Auth0 (o modo anónimo), persiste datos en PostgreSQL y permite enviar notificaciones por correo electrónico, SMS o notificaciones push.
