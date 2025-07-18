@@ -4,64 +4,66 @@
 
 [SimplQ](https://simplq.me) is a completely web based queue management solution that anyone can use to create instant queues. 
 
-## Development Envirmonment Setup Instructions
+## Environment Setup Instructions
 
-The project is written in Java, and deployed on AWS. These steps are to be followed when you are running the project for the first time.
+El proyecto está escrito en Java y se despliega en AWS. Sigue estos pasos la primera vez que ejecutes el proyecto.
 
-1. Install Java 11 and maven. 
-2. Clone this project
-3. Build the jar:
+1. Instala Java 11 y Maven.
+2. Clona este proyecto.
+3. Construye el jar:
 
 ```
 mvn package
 ```
-4. Run a development DB server:
+4. Ejecuta un servidor de base de datos para desarrollo:
 
 ```
 docker run --name simplq-db -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=admin -e POSTGRES_DB=simplq -d postgres
 ```
 
-5. Run the jar:
+5. Copia el archivo `.env.example` ubicado en la raíz del repositorio a `.env` y
+   completa las variables requeridas.
+6. Ejecuta el jar:
 
 ```
-java -jar simplq/target/simplq-0.0.1-SNAPSHOT.jar 
+java -jar simplq/target/simplq-1.0.0.jar
 ```
 
-We follow Google's [Java Style Guidelines](https://github.com/google/styleguide). For Intellij, you can install the [google-java-format](https://plugins.jetbrains.com/plugin/8527-google-java-format) plugin, Eclipse and other IDE users can find more instructions [here](https://github.com/google/google-java-format).
+Seguimos las [Guías de estilo de Java de Google](https://github.com/google/styleguide). Para Intellij puedes instalar el plugin [google-java-format](https://plugins.jetbrains.com/plugin/8527-google-java-format); para Eclipse y otros IDE consulta [esta guía](https://github.com/google/google-java-format).
 
-### Testing locally
+### Pruebas locales
 
-Test APIs through Postman - A test postman collection is available [here](https://www.getpostman.com/collections/252a096a86fc550fb5fb).
+Prueba las APIs con Postman: hay una colección de prueba disponible [aquí](https://www.getpostman.com/collections/252a096a86fc550fb5fb).
 
-Run Integration Tests: 
+Ejecuta las pruebas de integración:
 
 ```
 mvn test
 ```
 
-## Running in production
+## Ejecución en producción
 
-Generate the jar:
+Genera el jar:
 ```
 mvn package
 ```
 
-By default, the jar uses an in-memory H2 database. This is for development purposes only, and so for a production setup, set up a postgres DB and pass the DB connection parameters as environment variables:
+Por defecto el jar usa una base de datos H2 en memoria. Esto es solo para desarrollo. Para una configuración de producción debes crear una base de datos PostgreSQL y definir las variables de conexión. Estas pueden cargarse desde tu entorno o desde el archivo `.env`:
 
 ```
 export DB_USERNAME=<user-name>
 export DB_PASSWORD=<password>
 export DB_URL=jdbc:postgresql://<host>:<port>/<db>
 export TOKEN_URL=<base-token-url>
-java -Dspring.profiles.active=prod -jar simplq/target/simplq-0.0.1-SNAPSHOT.jar 
+java -Dspring.profiles.active=prod -jar simplq/target/simplq-1.0.0.jar
 ```
 
-We use [Liquidbase](https://www.liquibase.org/) for DB migrations. To run migrations:
+Usamos [Liquibase](https://www.liquibase.org/) para las migraciones de base de datos. Para ejecutarlas:
 ```
 mvn liquibase:update -Ddb.username=<username> -Ddb.password=<password> -Ddb.url=jdbc:postgresql://<host>:<port>/<db>
 ```
 
-# Contributing
+# Contribuciones
 
-Feel free to fork and improve, and do send a pull request. We will be delighed to work with you. 
+Siéntete libre de hacer un fork y mejorar; envía un pull request. Estaremos encantados de colaborar contigo.
 

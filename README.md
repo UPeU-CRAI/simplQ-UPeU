@@ -2,6 +2,12 @@
 
 simplQ-UPeU es una solución completa de código abierto para administrar colas de espera virtuales. El proyecto se divide en un **backend** desarrollado en Java/Spring Boot y un **frontend** construido con React.
 
+## Índice de subproyectos
+
+- [Backend](simplQ-backend/README.md): guía de desarrollo y despliegue del API.
+- [Frontend](simplQ-frontend/README.md): instrucciones para la aplicación web.
+- [Estructura del frontend](simplQ-frontend/simplq/readme.md): detalles técnicos del código React.
+
 ## Arquitectura general
 
 - **Backend (`simplQ-backend`)**: expone una API REST para gestionar colas y turnos. Implementa autenticación mediante Auth0 (o modo anónimo), persiste datos en PostgreSQL y permite enviar notificaciones por correo electrónico, SMS o notificaciones push.
@@ -25,6 +31,9 @@ simplQ-UPeU es una solución completa de código abierto para administrar colas 
 
 ## Requisitos para desarrollo local
 
+Antes de iniciar, copia el archivo `.env.example` a `.env` en la raíz del proyecto y completa los valores correspondientes.
+Este mismo archivo se utiliza para configurar tanto el backend como el frontend.
+
 ### Backend
 
 1. Java 11 y Maven instalados.
@@ -36,7 +45,7 @@ Pasos básicos:
 cd simplQ-backend/simplq
 mvn package
 # Asegúrate de que PostgreSQL esté en ejecución y disponga de la base de datos "simplq"
-java -jar target/simplq-0.0.1-SNAPSHOT.jar
+java -jar target/simplq-1.0.0.jar
 ```
 
 ### Frontend
@@ -51,6 +60,11 @@ npm start
 
 ## Más información
 
+## Instalación
+
+- [Instalación en servidor](docs/INSTALACION_SERVIDOR.md)
+- [Despliegue en AWS](docs/INSTALACION_AWS.md)
+
 Cada módulo incluye un `README.md` con detalles adicionales. Para conocer la estructura de código del frontend consulta `simplQ-frontend/simplq/readme.md` y para el backend `simplQ-backend/README.md`.
 
 Contribuciones y mejoras son bienvenidas.
@@ -58,3 +72,4 @@ Contribuciones y mejoras son bienvenidas.
 ## Historial de versiones
 
 - **v0.1.0** - Versión inicial del proyecto con backend y frontend base.
+- **v1.0.0** - Primera versión estable con guías de instalación, configuración mediante `.env` y sistema completo de notificaciones.
