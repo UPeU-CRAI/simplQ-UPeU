@@ -32,6 +32,7 @@ simplQ-UPeU es una solución completa de código abierto para administrar colas 
 ## Requisitos para desarrollo local
 
 Antes de iniciar, copia el archivo `.env.example` a `.env` en la raíz del proyecto y completa los valores correspondientes.
+Este mismo archivo se utiliza para configurar tanto el backend como el frontend.
 
 ### Backend
 
