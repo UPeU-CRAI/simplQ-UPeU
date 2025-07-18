@@ -51,6 +51,11 @@ npm start
 
 ## Más información
 
+## Instalación
+
+- [Instalación en servidor](docs/INSTALACION_SERVIDOR.md)
+- [Despliegue en AWS](docs/INSTALACION_AWS.md)
+
 Cada módulo incluye un `README.md` con detalles adicionales. Para conocer la estructura de código del frontend consulta `simplQ-frontend/simplq/readme.md` y para el backend `simplQ-backend/README.md`.
 
 Contribuciones y mejoras son bienvenidas.
