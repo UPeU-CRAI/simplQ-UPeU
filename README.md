@@ -31,6 +31,8 @@ simplQ-UPeU es una solución completa de código abierto para administrar colas 
 
 ## Requisitos para desarrollo local
 
+Antes de iniciar, copia el archivo `.env.example` a `.env` en la raíz del proyecto y completa los valores correspondientes.
+
 ### Backend
 
 1. Java 11 y Maven instalados.
