@@ -1,7 +1,7 @@
 package me.simplq.exceptions;
 
-import java.util.EnumMap;
-import java.util.Map;
+import static me.simplq.exceptions.SQException.registerMessage;
+import static me.simplq.exceptions.SQException.messageFor;
 
 public class SQInvalidRequestException extends SQException {
 
@@ -19,23 +19,20 @@ public class SQInvalidRequestException extends SQException {
     TOKEN_ALREADY_WAITING;
   }
 
-  // TODO Move to SQException and include internal server ones too.
-  private static final Map<ReasonCode, String> message = new EnumMap<>(ReasonCode.class);
-
   static {
-    message.put(ReasonCode.QUEUE_NOT_FOUND, "The queue does not exist");
-    message.put(ReasonCode.TOKEN_NOT_FOUND, "The token does not exist");
-    message.put(ReasonCode.QUEUE_NAME_ALREADY_EXISTS, "The queue name already exists");
-    message.put(ReasonCode.TOKEN_NOT_NOTIFIABLE, "Only tokens with WAITING status can be notified");
-    message.put(ReasonCode.TOKEN_DELETED, "The token has been deleted from the queue");
-    message.put(ReasonCode.QUEUE_PAUSED, "The queue has been paused");
-    message.put(ReasonCode.QUEUE_DELETED, "The queue has been deleted");
-    message.put(ReasonCode.QUEUE_DELETE_NOT_ALLOWED, "Delete not allowed in pause request");
-    message.put(ReasonCode.QUEUE_IS_FULL, "The queue is full, please try again after sometime");
-    message.put(
+    registerMessage(ReasonCode.QUEUE_NOT_FOUND, "The queue does not exist");
+    registerMessage(ReasonCode.TOKEN_NOT_FOUND, "The token does not exist");
+    registerMessage(ReasonCode.QUEUE_NAME_ALREADY_EXISTS, "The queue name already exists");
+    registerMessage(ReasonCode.TOKEN_NOT_NOTIFIABLE, "Only tokens with WAITING status can be notified");
+    registerMessage(ReasonCode.TOKEN_DELETED, "The token has been deleted from the queue");
+    registerMessage(ReasonCode.QUEUE_PAUSED, "The queue has been paused");
+    registerMessage(ReasonCode.QUEUE_DELETED, "The queue has been deleted");
+    registerMessage(ReasonCode.QUEUE_DELETE_NOT_ALLOWED, "Delete not allowed in pause request");
+    registerMessage(ReasonCode.QUEUE_IS_FULL, "The queue is full, please try again after sometime");
+    registerMessage(
         ReasonCode.ONLY_OWNER_CAN_CREATE_TOKEN,
         "Only queue owner can create tokens for this queue");
-    message.put(ReasonCode.TOKEN_ALREADY_WAITING, "Sorry, you are already present in the queue.");
+    registerMessage(ReasonCode.TOKEN_ALREADY_WAITING, "Sorry, you are already present in the queue.");
   }
 
   private final ReasonCode reasonCode;
@@ -94,6 +91,6 @@ public class SQInvalidRequestException extends SQException {
 
   @Override
   public String getMessage() {
-    return message.get(reasonCode);
+    return messageFor(reasonCode);
   }
 }
