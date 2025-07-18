@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import IconButton from '@material-ui/core/IconButton';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import Notifications from '@material-ui/icons/Notifications';
 import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
 import NotificationsOffIcon from '@material-ui/icons/NotificationsOffSharp';
@@ -46,9 +47,8 @@ function Token({ token }) {
     if (notifiable === false) {
       return <NotificationsOffIcon fontSize="large" />;
     }
-    // TODO: Add some visual (blinking) while notifyToken is pending
     if (notifyStatus === 'pending') {
-      return <NotificationsOffIcon fontSize="large" />;
+      return <CircularProgress size={24} className={styles['token-spinner']} />;
     }
     if (tokenStatus === 'NOTIFIED') {
       return <NotificationsActiveIcon fontSize="large" className={styles['token-icon-notified']} />;
