@@ -23,27 +23,21 @@ docker run --name simplq-db -p 5432:5432 \
 
 ## Configurar variables de entorno
 
-El backend lee las credenciales de la base de datos desde las variables `DB_USERNAME`, `DB_PASSWORD` y `DB_URL`. Define estos valores antes de iniciar la aplicación:
-
-```bash
-export DB_USERNAME=admin
-export DB_PASSWORD=password
-export DB_URL=jdbc:postgresql://localhost:5432/simplq
-```
-
-Para el frontend utiliza el archivo `.env` en la raíz del proyecto y ajusta la variable `BASE_URL` si es necesario:
+Tanto el backend como el frontend se configuran mediante un archivo `.env` en la raíz del proyecto. Copia el archivo de ejemplo y ajusta los valores según tu entorno:
 
 ```bash
 cp .env.example .env
-# Edita BASE_URL si es necesario
+vim .env
 ```
+
+En este archivo se definen las credenciales de la base de datos (`DB_USERNAME`, `DB_PASSWORD` y `DB_URL`) y la URL base del frontend (`BASE_URL`).
 
 ## Compilar y ejecutar el backend
 
 ```bash
 cd simplQ-backend/simplq
 mvn package
-java -jar target/simplq-0.0.1-SNAPSHOT.jar
+java -jar target/simplq-1.0.0.jar
 ```
 
 Para construir una imagen Docker ejecuta:

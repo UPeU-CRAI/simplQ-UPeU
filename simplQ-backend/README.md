@@ -21,10 +21,12 @@ mvn package
 docker run --name simplq-db -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=admin -e POSTGRES_DB=simplq -d postgres
 ```
 
-5. Ejecuta el jar:
+5. Copia el archivo `.env.example` ubicado en la raíz del repositorio a `.env` y
+   completa las variables requeridas.
+6. Ejecuta el jar:
 
 ```
-java -jar simplq/target/simplq-0.0.1-SNAPSHOT.jar 
+java -jar simplq/target/simplq-1.0.0.jar
 ```
 
 Seguimos las [Guías de estilo de Java de Google](https://github.com/google/styleguide). Para Intellij puedes instalar el plugin [google-java-format](https://plugins.jetbrains.com/plugin/8527-google-java-format); para Eclipse y otros IDE consulta [esta guía](https://github.com/google/google-java-format).
@@ -46,14 +48,14 @@ Genera el jar:
 mvn package
 ```
 
-Por defecto el jar usa una base de datos H2 en memoria. Esto es solo para desarrollo. Para una configuración de producción debes crear una base de datos PostgreSQL y pasar los parámetros de conexión como variables de entorno:
+Por defecto el jar usa una base de datos H2 en memoria. Esto es solo para desarrollo. Para una configuración de producción debes crear una base de datos PostgreSQL y definir las variables de conexión. Estas pueden cargarse desde tu entorno o desde el archivo `.env`:
 
 ```
 export DB_USERNAME=<user-name>
 export DB_PASSWORD=<password>
 export DB_URL=jdbc:postgresql://<host>:<port>/<db>
 export TOKEN_URL=<base-token-url>
-java -Dspring.profiles.active=prod -jar simplq/target/simplq-0.0.1-SNAPSHOT.jar 
+java -Dspring.profiles.active=prod -jar simplq/target/simplq-1.0.0.jar
 ```
 
 Usamos [Liquibase](https://www.liquibase.org/) para las migraciones de base de datos. Para ejecutarlas:
