@@ -12,7 +12,8 @@ These steps are to be followed when you are running the project for the first ti
 
 1. Install Node 12.x following instructions [here](https://github.com/nodesource/distributions/blob/master/README.md#debinstall).
 2. Clone this project.
-3. Change to `simplq` folder, install dependencies:
+3. Copy `.env.example` to `.env` inside the `simplq` folder and customize it if needed.
+4. Change to `simplq` folder and install dependencies:
 
 ```
 cd simplq
