@@ -31,10 +31,10 @@ export DB_PASSWORD=password
 export DB_URL=jdbc:postgresql://localhost:5432/simplq
 ```
 
-Para el frontend copia el archivo `.env.example` y ajusta la URL del backend:
+Para el frontend utiliza el archivo `.env` en la raíz del proyecto y ajusta la variable `BASE_URL` si es necesario:
 
 ```bash
-cp simplQ-frontend/simplq/.env.example simplQ-frontend/simplq/.env
+cp .env.example .env
 # Edita BASE_URL si es necesario
 ```
 
