@@ -2,6 +2,24 @@
 
 Este manual describe los pasos para preparar la base de datos y ejecutar los componentes del proyecto en un entorno local o en un servidor propio.
 
+## Crear usuario administrador
+
+Antes de instalar los servicios se recomienda crear un usuario con privilegios de sudo que ejecute las aplicaciones. A continuación se muestra un ejemplo utilizando `simplq` como nombre de usuario:
+
+```bash
+# Crea el usuario con carpeta home
+sudo adduser simplq
+
+# Añade simplq al grupo sudo
+sudo usermod -aG sudo simplq
+
+# Verifica que tenga home
+ls -ld /home/simplq
+
+# Verifica grupo sudo
+groups simplq
+```
+
 ## Preparar PostgreSQL
 
 1. Instala PostgreSQL 12 o superior.
