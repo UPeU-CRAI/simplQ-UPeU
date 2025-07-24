@@ -30,15 +30,6 @@ sudo -u postgres createuser -P simplq
 sudo -u postgres createdb simplq -O simplq
 ```
 
-Opcionalmente puedes usar Docker para lanzar un contenedor de prueba:
-
-```bash
-docker run --name simplq-db -p 5432:5432 \
-  -e POSTGRES_PASSWORD=simplq \
-  -e POSTGRES_USER=simplq \
-  -e POSTGRES_DB=simplq -d postgres
-```
-
 ## Configurar variables de entorno
 
 Tanto el backend como el frontend se configuran mediante un archivo `.env` en la raíz del proyecto. Copia el archivo de ejemplo y ajusta los valores según tu entorno:
