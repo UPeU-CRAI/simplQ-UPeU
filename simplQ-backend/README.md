@@ -18,7 +18,7 @@ mvn package
 4. Ejecuta un servidor de base de datos para desarrollo:
 
 ```
-docker run --name simplq-db -p 5432:5432 -e POSTGRES_PASSWORD=password -e POSTGRES_USER=admin -e POSTGRES_DB=simplq -d postgres
+docker run --name simplq-db -p 5432:5432 -e POSTGRES_PASSWORD=simplq -e POSTGRES_USER=simplq -e POSTGRES_DB=simplq -d postgres
 ```
 
 5. Copia el archivo `.env.example` ubicado en la raíz del repositorio a `.env` y

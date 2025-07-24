@@ -26,16 +26,16 @@ groups simplq
 2. Crea una base de datos llamada `simplq` y un usuario con permisos de lectura y escritura. Por ejemplo:
 
 ```bash
-sudo -u postgres createuser -P admin
-sudo -u postgres createdb simplq -O admin
+sudo -u postgres createuser -P simplq
+sudo -u postgres createdb simplq -O simplq
 ```
 
 Opcionalmente puedes usar Docker para lanzar un contenedor de prueba:
 
 ```bash
 docker run --name simplq-db -p 5432:5432 \
-  -e POSTGRES_PASSWORD=password \
-  -e POSTGRES_USER=admin \
+  -e POSTGRES_PASSWORD=simplq \
+  -e POSTGRES_USER=simplq \
   -e POSTGRES_DB=simplq -d postgres
 ```
 
