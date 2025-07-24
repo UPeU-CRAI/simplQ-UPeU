@@ -19,8 +19,8 @@
     <junitVersion>5.7.0</junitVersion>
     <mockitoVersion>3.7.7</mockitoVersion>
     <!-- 		Fallback to dev database to run Liquidbase migration if none specified  -->
-    <db.username>dev</db.username>
-    <db.password>password</db.password>
+    <db.username>simplq</db.username>
+    <db.password>simplq</db.password>
     <db.url>jdbc:postgresql://localhost:5432/simplq</db.url>
   </properties>
 
