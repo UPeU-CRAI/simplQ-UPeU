@@ -2,6 +2,15 @@
 
 Este manual describe los pasos para preparar la base de datos y ejecutar los componentes del proyecto en un entorno local o en un servidor propio.
 
+## Descargar el proyecto
+
+```bash
+git clone https://github.com/UPeU-CRAI/simplQ-UPeU.git
+cd simplQ-UPeU
+```
+
+Tras clonar el repositorio, copia el archivo `.env.example` a `.env` para configurar las variables requeridas.
+
 ## Crear usuario administrador
 
 Antes de instalar los servicios se recomienda crear un usuario con privilegios de sudo que ejecute las aplicaciones. A continuación se muestra un ejemplo utilizando `simplq` como nombre de usuario:

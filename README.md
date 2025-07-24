@@ -27,11 +27,22 @@ simplQ-UPeU es una solución completa de código abierto para administrar colas 
    - Consultar el estado de un turno o eliminarlo de la cola.
 
 3. **Notificaciones**
-   - El sistema puede enviar notificaciones mediante correo electrónico (Amazon SES), SMS (canal simulado o servicios externos) y notificaciones push usando Firebase.
+  - El sistema puede enviar notificaciones mediante correo electrónico (Amazon SES), SMS (canal simulado o servicios externos) y notificaciones push usando Firebase.
+
+## Descargar el proyecto
+
+Clona el repositorio y ubícate en la carpeta principal:
+
+```bash
+git clone https://github.com/UPeU-CRAI/simplQ-UPeU.git
+cd simplQ-UPeU
+```
+
+Después de clonar, copia el archivo `.env.example` a `.env` para poder completar las variables de entorno.
 
 ## Requisitos para desarrollo local
 
-Antes de iniciar, copia el archivo `.env.example` a `.env` en la raíz del proyecto y completa los valores correspondientes.
+Si aún no lo has hecho, copia el archivo `.env.example` a `.env` en la raíz del proyecto y completa los valores correspondientes.
 Este mismo archivo se utiliza para configurar tanto el backend como el frontend.
 
 ### Backend
