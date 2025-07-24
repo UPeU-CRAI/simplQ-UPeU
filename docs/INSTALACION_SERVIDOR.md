@@ -30,6 +30,15 @@ sudo -u postgres createuser -P simplq
 sudo -u postgres createdb simplq -O simplq
 ```
 
+## Descargar el proyecto
+
+```bash
+git clone https://github.com/UPeU-CRAI/simplQ-UPeU.git
+cd simplQ-UPeU
+```
+
+Tras clonar el repositorio, copia el archivo `.env.example` a `.env` para configurar las variables requeridas.
+
 ## Configurar variables de entorno
 
 Tanto el backend como el frontend se configuran mediante un archivo `.env` en la raíz del proyecto. Copia el archivo de ejemplo y ajusta los valores según tu entorno:
