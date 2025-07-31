@@ -1,6 +1,5 @@
 import React from 'react';
-import StandardButton from 'components/common/Button';
-import { smoothScrollToHomePageTop } from 'utils/scrollingOperations';
+
 import styles from './Home.module.scss';
 
 export const BenefitsInfo = () => (
@@ -122,12 +121,9 @@ export const ExtraInfo = () => (
   <div className={`${styles['section']} ${styles['extra-info']}`}>
     <div className={`${styles['container']} ${styles['extra-container']}`}>
       <div className={styles['card']}>
-        <img src="/images/free.svg" alt="free" />
-        <p className={styles['brief-description']}>Always free</p>
-        <p className={styles['detailed-description']}>
-          We are a team of enthusiastic developers who want to give back to society and do not
-          prioritize monetary gains.
-        </p>
+        <img src="/images/free.svg" alt="open" />
+        <p className={styles['brief-description']}>Código abierto</p>
+        <p className={styles['detailed-description']}>El proyecto está disponible de forma gratuita.</p>
       </div>
       <div className={styles['card']}>
         <img src="/images/secure.svg" alt="secure" />
@@ -147,50 +143,4 @@ export const ExtraInfo = () => (
   </div>
 );
 
-export const Pricing = () => (
-  <div data-aos="fade-up" className={`${styles['section']} ${styles['get-started']}`}>
-    <h2 data-aos="zoom-in">Pricing - Plans for every use case</h2>
-    <div className={styles['container']}>
-      <div className={styles['price-card']}>
-        <h1>Free</h1>
-        <p className={styles['subtitle']}>Basic for small businesses.</p>
-        <li>
-          <ul>Unlimited Queues</ul>
-          <ul>20,000 tokens per month.</ul>
-        </li>
-        <p className={styles['amount']}>$0</p>
-        <StandardButton onClick={smoothScrollToHomePageTop}>Start for free</StandardButton>
-      </div>
-      <div className={styles['price-card']}>
-        <h1>Business</h1>
-        <p className={styles['subtitle']}>For bigger companies.</p>
-        <li>
-          <ul>Everything in the free plan.</ul>
-          <ul>Unlimited tokens per month.</ul>
-          <ul>Custom subdomains.</ul>
-          <ul>Multi-user support.</ul>
-          <ul>Priority Customer Support.</ul>
-        </li>
-        <p className={styles['amount']}>$8.99/mo</p>
-        <StandardButton onClick={smoothScrollToHomePageTop}>Upgrade</StandardButton>
-      </div>
-      <div className={styles['price-card']}>
-        <h1>Enterprise</h1>
-        <p className={styles['subtitle']}>Best for unique requirements that need to scale.</p>
-        <li>
-          <ul>Everything in the business plan.</ul>
-          <ul>In-house installation support.</ul>
-          <ul>Custom features, integrations, branding.</ul>
-        </li>
-        <StandardButton
-          onClick={() => {
-            window.location = 'https://kss9gyhvcy3.typeform.com/to/kHJHPLEr';
-          }}
-        >
-          Contact Sales
-        </StandardButton>
-      </div>
-    </div>
-    <p>* No credit card required till you upgrade.</p>
-  </div>
-);
+export const Pricing = () => null;

@@ -1,12 +1,10 @@
 # SimplQ Backend
 
-[![Build Status](https://travis-ci.org/SimplQ/simplQ-backend.svg?branch=master)](https://travis-ci.org/SimplQ/simplQ-backend)
-
-[SimplQ](https://simplq.me) is a completely web based queue management solution that anyone can use to create instant queues. 
+SimplQ Backend es la API que gestiona las colas y los turnos.
 
 ## Environment Setup Instructions
 
-El proyecto está escrito en Java y se despliega en AWS. Sigue estos pasos la primera vez que ejecutes el proyecto.
+El proyecto está escrito en Java. Sigue estos pasos la primera vez que ejecutes el proyecto.
 
 1. Instala Java 11 y Maven.
 2. Clona este proyecto.
@@ -33,9 +31,7 @@ Seguimos las [Guías de estilo de Java de Google](https://github.com/google/styl
 
 ### Pruebas locales
 
-Prueba las APIs con Postman: hay una colección de prueba disponible [aquí](https://www.getpostman.com/collections/252a096a86fc550fb5fb).
-
-Ejecuta las pruebas de integración:
+Para ejecutar las pruebas de integración:
 
 ```
 mvn test

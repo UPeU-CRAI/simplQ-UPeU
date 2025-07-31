@@ -11,10 +11,7 @@ function PageNotFound(props) {
         <div className={styles.main}>
           <div className={styles.text}>
             <h1 className={styles.center}>Oops 404!</h1>
-            <p>
-              A queue with that name doesn&apos;t exist, please enter a valid queue name or create
-              one
-            </p>
+            <p>A queue with that name doesn&apos;t exist, please enter a valid queue name.</p>
             <CreateJoinForm defaultTextFieldValue={props.match.params.queueName} />
           </div>
         </div>

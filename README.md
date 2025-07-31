@@ -27,7 +27,7 @@ simplQ-UPeU es una solución completa de código abierto para administrar colas 
    - Consultar el estado de un turno o eliminarlo de la cola.
 
 3. **Notificaciones**
-  - El sistema puede enviar notificaciones mediante correo electrónico (Amazon SES), SMS (canal simulado o servicios externos) y notificaciones push usando Firebase.
+  - El sistema puede enviar notificaciones mediante correo electrónico, SMS y notificaciones push.
 
 ## Descargar el proyecto
 
@@ -74,7 +74,6 @@ npm start
 ## Instalación
 
 - [Instalación en servidor](docs/INSTALACION_SERVIDOR.md)
-- [Despliegue en AWS](docs/INSTALACION_AWS.md)
 
 Cada módulo incluye un `README.md` con detalles adicionales. Para conocer la estructura de código del frontend consulta `simplQ-frontend/simplq/readme.md` y para el backend `simplQ-backend/README.md`.
 

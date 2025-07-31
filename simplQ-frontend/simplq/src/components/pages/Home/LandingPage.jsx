@@ -6,7 +6,7 @@ import styles from './Home.module.scss';
 import MyQueues from './MyQueues';
 
 export default () => {
-  let subtitle = 'Give Your Customers a Delightful Waiting Experience.';
+  let subtitle = 'Bienvenido';
   const { user, isAuthenticated } = useAuth0();
   if (isAuthenticated) {
     subtitle = `Hi ${user.name}, welcome back!`;
@@ -17,10 +17,7 @@ export default () => {
       <div data-aos="zoom-in">
         <Header className={styles['main-header']}>SimplQ</Header>
         <p className={styles.subtitle}>{subtitle}</p>
-        <p className={styles.description}>
-          Web based free queue management software to let your customers feel more relaxed and
-          delighted.
-        </p>
+        <p className={styles.description}>Gestión sencilla de colas virtuales.</p>
       </div>
       <MyQueues />
       <QueueForm />

@@ -23,8 +23,8 @@ export default () => {
     <div className={styles['my-queue']}>
       <p>
         {queues.length === 0
-          ? "Looks like you don't have any active queues. Start by creating one..."
-          : 'What would you like to do today? Here are your active queues:'}
+          ? 'No hay colas activas.'
+          : 'Estas son tus colas activas:'}
       </p>
       {queues.map((queue) => {
         const handler = () => history.push(`/queue/${queue.queueId}`);
