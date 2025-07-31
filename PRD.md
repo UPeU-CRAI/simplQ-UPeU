@@ -37,7 +37,7 @@ Facilitar la creación y gestión de colas de atención remotas, reduciendo aglo
 ## Configuración y despliegue
 1. Clonar el repositorio y copiar `.env.example` a `.env`.
 2. Para el backend instalar Java y Maven, compilar con `mvn package` y ejecutar el jar.
-3. Para el frontend instalar Node.js 12, ejecutar `npm install` dentro de `simplQ-frontend/simplq` y luego `npm start`.
+3. Para el frontend instalar Node.js 18, ejecutar `npm install` dentro de `simplQ-frontend/simplq` y luego `npm start`.
 4. En entornos de producción se puede desplegar en servidores propios o en AWS siguiendo las guías de `docs/`.
 
 ## Métricas de éxito

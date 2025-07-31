@@ -61,7 +61,7 @@ java -jar target/simplq-1.0.0.jar
 
 ### Frontend
 
-1. Node.js 12.x instalado.
+1. Node.js 18.x instalado.
 
 ```bash
 cd simplQ-frontend/simplq
