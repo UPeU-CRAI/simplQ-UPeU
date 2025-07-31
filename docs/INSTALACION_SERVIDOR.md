@@ -72,8 +72,19 @@ npm install
 npm start
 ```
 
+El frontend requiere **Node.js 18** o superior instalado en el servidor.
+
 También puedes construir la imagen Docker disponible en `simplQ-frontend/simplq`:
 
 ```bash
 docker build -t simplq-frontend simplQ-frontend/simplq
 ```
+
+## Escenario de uso en el campus
+
+En un despliegue típico la aplicación se aloja en un servidor del data center. Las
+personas que atienden en el edificio de admisión acceden vía web para gestionar sus
+colas. Los clientes registran su llegada en un terminal ubicado en la entrada y en
+las paredes se muestran pantallas con el estado de las colas y el turno que sigue.
+La configuración de las colas (nombres, límites, etc.) se realiza previamente por el
+equipo de TI para que estén listas a diario.
