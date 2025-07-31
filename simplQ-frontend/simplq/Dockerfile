@@ -1,4 +1,4 @@
-FROM node:14.16-alpine AS build
+FROM node:18-alpine AS build
 
 ARG BASE_URL="http://localhost:8080/v1"
 

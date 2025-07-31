@@ -6,7 +6,7 @@
 
 Sigue estos pasos la primera vez que ejecutes el proyecto.
 
-1. Instala Node 12.x siguiendo las instrucciones [aqui](https://github.com/nodesource/distributions/blob/master/README.md#debinstall).
+1. Instala Node 18.x siguiendo las instrucciones [aqui](https://github.com/nodesource/distributions/blob/master/README.md#debinstall).
 2. Clona este proyecto.
 3. Copia el archivo `.env.example` ubicado en la raíz del proyecto a `.env` (en la misma raíz) y personalízalo si es necesario.
 4. Entra en la carpeta `simplq` e instala las dependencias:
