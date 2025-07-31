@@ -1,6 +1,6 @@
 FROM node:14.16-alpine AS build
 
-ARG BASE_URL="https://devbackend.simplq.me/v1"
+ARG BASE_URL="http://localhost:8080/v1"
 
 RUN echo ${BASE_URL}
 

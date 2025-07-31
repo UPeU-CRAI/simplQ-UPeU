@@ -29,10 +29,10 @@ const theme = createTheme({
 
 ReactDOM.render(
   <Auth0Provider
-    domain="simplq.us.auth0.com"
-    clientId="9BAywifjAy6n0sx8WbuQubMGGjofpwd6"
+    domain="your-auth-domain"
+    clientId="your-client-id"
     redirectUri={window.location.origin}
-    audience="https://devbackend.simplq.me/v1"
+    audience="http://localhost:8080/v1"
     scope="read:current_user update:current_user_metadata"
     cacheLocation="localstorage"
     useRefreshTokens

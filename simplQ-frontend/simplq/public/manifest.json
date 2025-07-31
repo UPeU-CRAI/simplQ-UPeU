@@ -1,6 +1,6 @@
 {
   "short_name": "SimplQ",
-  "name": "SimplQ - A long overdue alternative to physical queues",
+  "name": "SimplQ Queue Management",
   "icons": [
     {
       "src": "/images/Simple-Q-144x144.png",

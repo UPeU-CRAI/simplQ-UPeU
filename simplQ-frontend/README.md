@@ -1,10 +1,6 @@
 # SimplQ
 
-![Build and Deploy](https://img.shields.io/github/issues/SimplQ/simplQ-frontend)
-![Build and Deploy](https://img.shields.io/github/license/SimplQ/simplQ-frontend)
-![Gitter](https://img.shields.io/gitter/room/SimplQ/community)
-
-[SimplQ](https://simplq.me) es una solución de gestión de colas totalmente web que cualquiera puede usar para crear colas virtuales al instante. Visítanos en [ProductHunt](https://www.producthunt.com/posts/simplq) para saber más y apoyarnos.
+[SimplQ](https://github.com/UPeU-CRAI/simplQ-UPeU) es una solución de gestión de colas de código abierto construida con React.
 
 ### Instrucciones para configurar el entorno de desarrollo
 
@@ -40,11 +36,8 @@ Siéntete libre de hacer un fork y mejorar; envía un pull request. Busca issues
 
 Hay muchas características en planificación. Si deseas contribuir, primero comenta los cambios que quieras realizar mediante el issue tracker.
 
-En el archivo [readme](/simplq/readme.md) se detallan la estructura de archivos y las herramientas utilizadas. Por favor revísalo primero. Este es el [diseño](https://xd.adobe.com/view/ad1db074-03bf-45b1-537b-98d9d524ec82-db2c/grid) que hemos implementado y aquí puedes descargar los recursos (iconos, imágenes). El sitio web está disponible [aquí](https://simplq.me/).
-
-Hoja de ruta de implementación: https://github.com/SimplQ/simplQ-frontend/issues/207
-
+En el archivo [readme](/simplq/readme.md) se detallan la estructura de archivos y las herramientas utilizadas.
 
 # Despliegue
 
-Los cambios en la rama master se despliegan automáticamente en [dev.simplq.me](https://dev.simplq.me/). Periódicamente revisamos esa versión y la promovemos a [simplq.me](https://simplq.me).
+La aplicación puede desplegarse en cualquier servidor que sirva archivos estáticos.

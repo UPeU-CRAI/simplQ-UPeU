@@ -25,7 +25,7 @@ import software.amazon.awssdk.services.ses.model.SesException;
 @Slf4j
 public class SesEmailNotificationChannel implements NotificationChannel {
   private final SesClient client = SesClient.builder().region(Region.US_WEST_2).build();
-  private static final String FROM_EMAIL = "notifications@simplq.me";
+  private static final String FROM_EMAIL = "noreply@example.com";
 
   @Override
   public void notify(Token token, me.simplq.service.message.Message message) {
@@ -76,8 +76,7 @@ public class SesEmailNotificationChannel implements NotificationChannel {
       // Add the multipart/alternative part to the message
       msg.addBodyPart(wrap);
 
-      System.out.println(
-          "Attempting to send an email through Amazon SES " + "using the AWS SDK for Java...");
+      System.out.println("Enviando correo electrónico...");
 
       ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
       email.writeTo(outputStream);

@@ -7,8 +7,4 @@ Feel free to fork and improve.Here are a few things to note before you head on:
 
 -  Go through the [readme](/simplq/readme.md) file for details on file structure and tools used.
 
--  The frontend is being revamped heavily right and we're implementing this new [design](https://xd.adobe.com/view/ad1db074-03bf-45b1-537b-98d9d524ec82-db2c/grid) 
-
--   The assets (icons, images) we're using are available for download. 
-
--  You can see the frontend live [here](https://simplq.me/).
+The frontend está en constante mejora.
