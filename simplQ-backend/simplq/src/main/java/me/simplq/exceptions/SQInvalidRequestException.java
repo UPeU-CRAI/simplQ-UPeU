@@ -16,7 +16,8 @@ public class SQInvalidRequestException extends SQException {
     QUEUE_DELETE_NOT_ALLOWED,
     QUEUE_IS_FULL,
     ONLY_OWNER_CAN_CREATE_TOKEN,
-    TOKEN_ALREADY_WAITING;
+    TOKEN_ALREADY_WAITING,
+    QUEUE_IDENTIFIER_REQUIRED;
   }
 
   static {
@@ -33,6 +34,9 @@ public class SQInvalidRequestException extends SQException {
         ReasonCode.ONLY_OWNER_CAN_CREATE_TOKEN,
         "Only queue owner can create tokens for this queue");
     registerMessage(ReasonCode.TOKEN_ALREADY_WAITING, "Sorry, you are already present in the queue.");
+    registerMessage(
+        ReasonCode.QUEUE_IDENTIFIER_REQUIRED,
+        "Either queueId or queueName parameter must be provided");
   }
 
   private final ReasonCode reasonCode;
@@ -83,6 +87,10 @@ public class SQInvalidRequestException extends SQException {
 
   public static SQInvalidRequestException tokenAlreadyWaiting() {
     return new SQInvalidRequestException(ReasonCode.TOKEN_ALREADY_WAITING);
+  }
+
+  public static SQInvalidRequestException queueIdentifierRequired() {
+    return new SQInvalidRequestException(ReasonCode.QUEUE_IDENTIFIER_REQUIRED);
   }
 
   public ReasonCode getReasonCode() {

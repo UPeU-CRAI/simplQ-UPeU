@@ -43,7 +43,6 @@ public class TexLocalSmsChannel implements NotificationChannel {
       }
       rd.close();
     } catch (Exception e) {
-      // TODO Move to exception framework
       throw new SQInternalServerException("Error sending SMS" + e.getMessage(), e);
     }
   }

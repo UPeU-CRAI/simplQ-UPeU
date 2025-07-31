@@ -1,4 +1,4 @@
-FROM node:14.16-alpine AS build
+FROM node:18-alpine AS build
 
 ARG BASE_URL="https://devbackend.simplq.me/v1"
 
