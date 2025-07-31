@@ -12,6 +12,7 @@ import me.simplq.controller.model.queue.QueueDetailsResponse;
 import me.simplq.controller.model.queue.QueueEventsResponse;
 import me.simplq.controller.model.queue.QueueStatusResponse;
 import me.simplq.controller.model.queue.UpdateQueueStatusResponse;
+import me.simplq.exceptions.SQInvalidRequestException;
 import me.simplq.service.QueueService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -77,7 +78,7 @@ public class QueueController {
     } else if (queueName != null) {
       return ResponseEntity.ok(queueService.getQueueStatusByName(queueName));
     } else {
-      return ResponseEntity.badRequest().build(); // Todo Give reason
+      throw SQInvalidRequestException.queueIdentifierRequired();
     }
   }
 
